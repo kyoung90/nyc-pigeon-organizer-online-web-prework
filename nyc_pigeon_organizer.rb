@@ -17,7 +17,6 @@ def nyc_pigeon_organizer(data)
       if !hash[name].has_key?(:gender)
         hash[name].merge!({:gender => [gender.to_s]})
       else 
-        
       end 
     end 
   end

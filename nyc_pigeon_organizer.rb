@@ -4,8 +4,11 @@ def nyc_pigeon_organizer(data)
   
   data[:color].each do |color, names_arr|
     names_arr.each do |name|
-      if hash[name].has_key?(:color)
-      hash[name] = {:color => }
+      if hash.has_key?(name)
+        hash[name][:color].push(color)
+      else 
+        hash[name][:color] = [color]
+      end 
     end 
   end 
 end

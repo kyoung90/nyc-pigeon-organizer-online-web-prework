@@ -7,7 +7,7 @@ def nyc_pigeon_organizer(data)
       if hash.has_key?(name)
         hash[name][:color].push(color)
       else 
-        hash[name][:color] = [color]
+        hash[name] = {color : [color]}
       end 
     end 
   end 

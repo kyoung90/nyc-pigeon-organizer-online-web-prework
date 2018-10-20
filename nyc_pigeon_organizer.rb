@@ -5,9 +5,9 @@ def nyc_pigeon_organizer(data)
   data[:color].each do |color, names_arr|
     names_arr.each do |name|
       if hash.has_key?(name)
-        hash[name][:color].push(color)
+        hash[name][:color].push(color.to_s)
       else 
-        hash[name] = {:color => [color]}
+        hash[name] = {:color => [color.to_s]}
       end 
     end 
   end 

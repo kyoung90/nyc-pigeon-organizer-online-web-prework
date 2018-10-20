@@ -30,5 +30,14 @@ def nyc_pigeon_organizer(data)
     end 
   end
   
+  data[:lives].each do |place, names_arr|
+    names_arr.each do |name|
+      if !hash[name].has_key?(lives)
+        hash[name].merge!({:lives => [place]})
+      else 
+      end 
+    end 
+  end
+  
   return hash
 end

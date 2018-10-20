@@ -10,6 +10,8 @@ def nyc_pigeon_organizer(data)
         hash[name] = {:color => [color.to_s]}
       end 
     end 
-  end 
+  end
+  
+  
   return hash
 end

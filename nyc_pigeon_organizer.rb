@@ -12,6 +12,16 @@ def nyc_pigeon_organizer(data)
     end 
   end
   
+  data[:gender].each do |gender, names_arr|
+    names_arr.each do |name|
+      if hash[name].has_key?(:gender)
+        hash[name][:color].push(color.to_s)
+      else 
+        hash[name] = {:color => [color.to_s]}
+      end 
+    end 
+  end
+  
   
   return hash
 end

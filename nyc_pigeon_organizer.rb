@@ -15,7 +15,7 @@ def nyc_pigeon_organizer(data)
   data[:gender].each do |gender, names_arr|
     names_arr.each do |name|
       if !hash[name].has_key?(:gender)
-        hash[name].merge({:gender => [gender.to_s]})
+        hash[name].merge!({:gender => [gender.to_s]})
       else 
         
       end 
